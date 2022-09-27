@@ -104,49 +104,48 @@ body .bodyHeader nav ul li {
   left: 0;
   margin: 0.3rem;
 }
-
-.wrapper {
+body .wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 3.5rem 0.5rem 0 0.5rem;
 }
-.wrapper header {
+body .wrapper header {
   width: 100%;
 }
-.wrapper header h2 {
+body .wrapper header h2 {
   margin: 0;
 }
-.wrapper .content p {
+body .wrapper .content p {
   margin: 0;
   margin-bottom: 2rem;
   line-height: 1.2rem;
 }
-.wrapper .content img {
+body .wrapper .content img {
   max-width: 100%;
 }
-.wrapper .content .tableWrapper {
+body .wrapper .content .tableWrapper {
   padding: 0 1rem;
 }
-.wrapper .content table {
+body .wrapper .content table {
   box-shadow: var(--default-box-shadow);
   width: 100%;
   border-collapse: collapse;
 }
-.wrapper .content table tr {
+body .wrapper .content table tr {
   background: var(--foreground-light);
 }
-.wrapper .content table tr:nth-child(even) {
+body .wrapper .content table tr:nth-child(even) {
   background: var(--foreground-lighter);
 }
-.wrapper .content table th {
+body .wrapper .content table th {
   background-color: var(--foreground-dark);
   padding: 0.5rem;
 }
-.wrapper .content table td {
+body .wrapper .content table td {
   padding: 0.3rem;
 }
-.wrapper .content form {
+body .wrapper .content form {
   display: flex;
   flex-direction: column;
   padding: 1rem;
@@ -156,9 +155,44 @@ body .bodyHeader nav ul li {
   box-shadow: var(--default-box-shadow);
   border-radius: 0.5rem;
 }
-.wrapper .content form input,
-.wrapper .content form textarea {
+body .wrapper .content form input,
+body .wrapper .content form textarea {
   padding: 10px;
+}
+body .wrapper .content .projects {
+  border: 2px dashed red;
+}
+body .wrapper .content .projects .projectsWrapper {
+  border: 2px dashed blue;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+body .wrapper .content .projects .projectsWrapper .project {
+  cursor: pointer;
+  position: realative;
+  aspect-ratio: 1/1;
+  width: 28%;
+  border-radius: 0 0 1.4rem 1.4rem;
+  margin: 0.5rem;
+}
+body .wrapper .content .projects .projectsWrapper header {
+  border: 5px dashed rgb(255, 255, 255);
+  z-index: 1;
+}
+body .wrapper .content .projects .projectsWrapper header position:relative h3 {
+  margin: 0;
+}
+body .wrapper .content .projects .projectsWrapper header p {
+  display: none;
+}
+body .wrapper .content .projects .projectsWrapper img {
+  border-radius: 1.2rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
 }
 
 footer {
