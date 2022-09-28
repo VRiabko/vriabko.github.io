@@ -161,27 +161,27 @@ body {
     
             .tableWrapper {
                 padding: 0 1rem;
-                table {
-                    box-shadow: var(--default-box-shadow);
-                    width: 100%;
-                    border-collapse: collapse;
-        
-                    tr {
-                        background: var(--foreground-light);
-        
-                        &:nth-child(even) {
-                            background: var(--foreground-lighter);
-                        }
+            }
+            table {
+                box-shadow: var(--default-box-shadow);
+                width: 100%;
+                border-collapse: collapse;
+    
+                tr {
+                    background: var(--foreground-light);
+    
+                    &:nth-child(even) {
+                        background: var(--foreground-lighter);
                     }
-        
-                    th {
-                        background-color: var(--foreground-dark);
-                        padding: .5rem;
-                    }
-        
-                    td {
-                        padding: .3rem;
-                    }
+                }
+    
+                th {
+                    background-color: var(--foreground-dark);
+                    padding: .5rem;
+                }
+    
+                td {
+                    padding: .3rem;
                 }
             }
     
@@ -202,10 +202,10 @@ body {
                 }
             }
             .projects{
-                border: 2px dashed red;
+                
                 .projectsWrapper{
 
-                    border: 2px dashed blue;
+                    
                     display: flex;
                     flex-wrap: wrap;
                     justify-content: center;
@@ -214,8 +214,9 @@ body {
                         position:relative;
                         aspect-ratio: 1/1;
                         width: 28%;
+                        max-width: 7rem;
                         border-radius: 0 0 1.4rem 1.4rem;
-                        margin:.5rem;
+                        margin:.25rem;
 
                         header{
                             border: 5px dashed #fff;
@@ -243,16 +244,51 @@ body {
                 }
 
                 .display{
-                    border: 5px dashed green;
+                    background-color: rgba(255, 255, 255, 0.336);
+                    display:flex;
+                    flex-direction: column;
+                    align-items: center;
+                    
                     ul{
                         padding: 0;
                         margin:0;
                         display: flex;
-                        border: 4px dashed darkcyan;
+                        
                         justify-content: space-between;
                         li{
                             list-style-type: none;
-                            border: 2px dashed blue;
+                        }
+                    }
+                    article{
+            
+                        position: relative;
+                        display: inline-block;
+
+
+
+                        .displayContent{
+                            position: absolute;
+                            width:100%;
+                            height:100%;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: end;
+                            align-items: end;
+                            text-align: right;
+
+                            h3,p{
+                                margin:0;
+                                padding: 0.5rem 1.5rem;
+                                background-color: rgba(255, 255, 255, 0.735);
+                                
+                                
+
+                            }
+                            
+                        }
+                        img{
+                           
+                            max-height:40vh;
                         }
                     }
                 }
@@ -309,14 +345,15 @@ body {
         .wrapper {
             // min-height: 70vh;
             flex-direction: row;
-
+            text-align: right;
             &:nth-child(odd) {
                 flex-direction: row-reverse;
+                text-align: left;
             }
 
             >* {
                 flex: 1;
-                text-align: center;
+                // text-align: center;
                 padding: 3rem;
             }
         }
