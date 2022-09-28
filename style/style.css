@@ -32,6 +32,7 @@ body {
   font-family: "Merriweather", serif;
 }
 body .bodyHeader {
+  z-index: 2;
   background-color: var(--background-light);
   display: flex;
   justify-content: space-between;
@@ -127,22 +128,22 @@ body .wrapper .content img {
 body .wrapper .content .tableWrapper {
   padding: 0 1rem;
 }
-body .wrapper .content table {
+body .wrapper .content .tableWrapper table {
   box-shadow: var(--default-box-shadow);
   width: 100%;
   border-collapse: collapse;
 }
-body .wrapper .content table tr {
+body .wrapper .content .tableWrapper table tr {
   background: var(--foreground-light);
 }
-body .wrapper .content table tr:nth-child(even) {
+body .wrapper .content .tableWrapper table tr:nth-child(even) {
   background: var(--foreground-lighter);
 }
-body .wrapper .content table th {
+body .wrapper .content .tableWrapper table th {
   background-color: var(--foreground-dark);
   padding: 0.5rem;
 }
-body .wrapper .content table td {
+body .wrapper .content .tableWrapper table td {
   padding: 0.3rem;
 }
 body .wrapper .content form {
@@ -170,23 +171,26 @@ body .wrapper .content .projects .projectsWrapper {
 }
 body .wrapper .content .projects .projectsWrapper .project {
   cursor: pointer;
-  position: realative;
+  position: relative;
   aspect-ratio: 1/1;
   width: 28%;
   border-radius: 0 0 1.4rem 1.4rem;
   margin: 0.5rem;
 }
-body .wrapper .content .projects .projectsWrapper header {
-  border: 5px dashed rgb(255, 255, 255);
+body .wrapper .content .projects .projectsWrapper .project header {
+  border: 5px dashed #fff;
+  background-color: rgba(255, 255, 255, 0.5);
   z-index: 1;
+  position: relative;
 }
-body .wrapper .content .projects .projectsWrapper header position:relative h3 {
+body .wrapper .content .projects .projectsWrapper .project header h3 {
   margin: 0;
 }
-body .wrapper .content .projects .projectsWrapper header p {
+body .wrapper .content .projects .projectsWrapper .project header p {
+  opacity: 0;
   display: none;
 }
-body .wrapper .content .projects .projectsWrapper img {
+body .wrapper .content .projects .projectsWrapper .project img {
   border-radius: 1.2rem;
   position: absolute;
   left: 0;
@@ -194,8 +198,21 @@ body .wrapper .content .projects .projectsWrapper img {
   width: 100%;
   height: 100%;
 }
-
-footer {
+body .wrapper .content .projects .display {
+  border: 5px dashed green;
+}
+body .wrapper .content .projects .display ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  border: 4px dashed darkcyan;
+  justify-content: space-between;
+}
+body .wrapper .content .projects .display ul li {
+  list-style-type: none;
+  border: 2px dashed blue;
+}
+body footer {
   /* border: 2px dashed red; */
   margin-top: 3rem;
   background-color: black;
@@ -206,12 +223,12 @@ footer {
   align-items: flex-end;
   padding: 1rem;
 }
-footer ol {
+body footer ol {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-footer p {
+body footer p {
   margin: 0;
 }
 
@@ -225,7 +242,6 @@ footer p {
     display: none;
   }
   body .wrapper {
-    min-height: 70vh;
     flex-direction: row;
   }
   body .wrapper:nth-child(odd) {
