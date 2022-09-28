@@ -179,7 +179,7 @@ body .wrapper .content .projects .projectsWrapper .project {
 }
 body .wrapper .content .projects .projectsWrapper .project header {
   border: 5px dashed #fff;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgb(255, 255, 255);
   z-index: 1;
   position: relative;
 }
